@@ -1,0 +1,108 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Panda ASI — Quantum Money & Super AI</title>
+<meta name="description" content="Panda ASI: a playful vision of quantum money, super AI and energy-positive datacenters. Concept site.">
+<meta property="og:title" content="Panda ASI"><meta property="og:image" content="https://www.panda-asi.com/og-image.png"><meta property="og:url" content="https://www.panda-asi.com/"><meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/svg+xml" href="favicon.svg"><link rel="icon" href="assets/favicon.ico"><link rel="icon" type="image/png" href="assets/favicon-32.png"><link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<style>
+:root{--bg:#070814;--card:#11142b;--blue:#38bdf8;--pur:#a855f7;--txt:#e6e8ff;--mut:#9aa0c7}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,Segoe UI,Roboto,sans-serif;background:radial-gradient(circle at 20% 0,#1b1050,transparent 50%),radial-gradient(circle at 90% 30%,#06304a,transparent 45%),var(--bg);color:var(--txt);line-height:1.6}
+a{color:var(--blue)}nav{position:sticky;top:0;z-index:9;display:flex;justify-content:space-between;align-items:center;padding:.8rem 5vw;background:#070814cc;backdrop-filter:blur(10px);border-bottom:1px solid #ffffff14}
+nav b{font-size:1.2rem;background:linear-gradient(90deg,var(--blue),var(--pur));-webkit-background-clip:text;color:transparent}nav .l a{color:var(--mut);text-decoration:none;margin-left:1.2rem;font-size:.92rem}nav .l a:hover{color:#fff}
+section{padding:5rem 5vw;max-width:1200px;margin:auto}h1{font-size:clamp(2.4rem,6vw,4.4rem);line-height:1.05;margin:.2em 0}h2{font-size:clamp(1.8rem,4vw,2.6rem);margin:0 0 1rem}
+.g{background:linear-gradient(90deg,var(--blue),var(--pur));-webkit-background-clip:text;color:transparent}
+.hero{display:grid;grid-template-columns:1.1fr 1fr;gap:3rem;align-items:center;min-height:min(85vh,760px)}.hero img{width:100%;border-radius:24px;box-shadow:0 0 60px #a855f755,0 0 120px #38bdf833}
+.tag{display:inline-block;padding:.3rem .8rem;border:1px solid var(--pur);border-radius:99px;color:#d8b4fe;font-size:.85rem}
+.btn{display:inline-block;margin:.4rem .6rem 0 0;padding:.8rem 1.4rem;border-radius:12px;text-decoration:none;font-weight:600;color:#fff;background:linear-gradient(90deg,#0ea5e9,#9333ea)}.btn.o{background:none;border:1px solid #ffffff33}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.2rem}.card{background:var(--card);border:1px solid #ffffff12;border-radius:18px;padding:1.5rem;transition:.2s}.card:hover{border-color:var(--pur);box-shadow:0 0 30px #a855f733;transform:translateY(-3px)}
+.card h3{margin:.3rem 0}.ic{font-size:1.8rem}p.m,.card p{color:var(--mut)}blockquote{border-left:3px solid var(--blue);margin:1.5rem 0;padding:.3rem 1rem;font-size:1.25rem;font-style:italic}
+.pic{width:100%;border-radius:18px;margin:1.2rem 0;box-shadow:0 0 40px #a855f733;aspect-ratio:3/2;object-fit:cover}.gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem}.gal img{width:100%;border-radius:14px;aspect-ratio:3/2;object-fit:cover;border:1px solid #ffffff14}.vis{font-size:.75rem;color:#fbbf24;border:1px solid #fbbf2455;border-radius:6px;padding:.1rem .4rem}
+.tick{overflow:hidden;white-space:nowrap;border-block:1px solid #ffffff14;background:#0b0d22;padding:.6rem 0;font-family:ui-monospace,monospace;font-size:.9rem}.tick div{display:inline-block;animation:sc 60s linear infinite;padding-left:100%}.tick span{margin-right:2.5rem;color:#c4b5fd}.tick b{color:#34d399}@keyframes sc{to{transform:translateX(-100%)}}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem}.stat{background:var(--card);border-radius:18px;padding:1.4rem;text-align:center;border:1px solid #ffffff12}.stat .n{font-size:2.3rem;font-weight:800;background:linear-gradient(90deg,var(--blue),var(--pur));-webkit-background-clip:text;color:transparent}.stat small{color:var(--mut)}
+ol.man{counter-reset:m;list-style:none;padding:0}ol.man li{counter-increment:m;margin:1rem 0;padding:1rem 1.2rem 1rem 4rem;position:relative;background:var(--card);border-radius:14px}ol.man li:before{content:counter(m,decimal-leading-zero);position:absolute;left:1rem;top:1rem;font-weight:800;color:var(--pur)}
+details{background:var(--card);border-radius:14px;padding:1rem 1.2rem;margin:.7rem 0;border:1px solid #ffffff12}summary{cursor:pointer;font-weight:600}details p{color:var(--mut)}
+@media(prefers-reduced-motion:reduce){.tick div{animation:none;padding-left:0}}
+#asi{background:linear-gradient(135deg,#1b1050aa,#06304aaa);border:1px solid #a855f755;border-radius:28px;margin-block:2rem}
+.stack{counter-reset:k;list-style:none;padding:0;display:grid;gap:.8rem}.stack li{counter-increment:k;background:#070814cc;border:1px solid #38bdf833;border-radius:14px;padding:1rem 1.2rem 1rem 4.2rem;position:relative}.stack li:before{content:"L" counter(k);position:absolute;left:1rem;top:.9rem;font-weight:800;font-size:1.3rem;color:var(--blue)}
+.top{text-align:center;margin-top:2.5rem}.top h3{font-size:clamp(2.2rem,6vw,4.2rem);margin:.2em 0;line-height:1.05}.top p{font-size:1.15rem;margin:.3rem}
+.gal{grid-template-columns:repeat(auto-fill,minmax(150px,1fr))!important;gap:.7rem!important}.gal img{max-height:110px}
+footer{padding:2rem 5vw;border-top:1px solid #ffffff14;text-align:center;color:var(--mut);font-size:.85rem}
+@media(max-width:820px){.hero{grid-template-columns:1fr;min-height:auto;padding-top:3rem}nav .l{display:none}section{padding:3.5rem 6vw}}
+</style></head><body>
+<nav><b>🐼 PANDA ASI</b><div class="l"><a href="#vision">Vision</a><a href="#asi">Super ASI</a><a href="#money">Quantum Money</a><a href="#ai">Super AI</a><a href="#energy">Energy</a><a href="#pandanauts">Pandanauts</a><a href="#posts">Posts</a><a href="#manifesto">Manifesto</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></div></nav><div class="tick" aria-label="Joke ticker"><div><span>PANDA-Q <b>▲ ∞%</b> (in superposition)</span><span>BAMBOO/QUBIT <b>▲ 42.0</b></span><span>VALUATION ~100,000,000,000+ (vibes-based, unaudited)</span><span>NO-CLONING THEOREM <b>STILL UNDEFEATED</b></span><span>COFFEE AT HQ <b>▼ critically low</b></span><span>PANDANAUTS ON MARS <b>0 (so far)</b></span><span>ENERGY DRINK SALES <b>bigger than Red Bull*</b> *in our dreams</span><span>SUPERPOSITION PAYMENTS <b>everywhere & nowhere</b></span><span>SCHRÖDINGER'S BALANCE <b>observed: fine</b></span><span>PANDA-Q <b>▲ ∞%</b> (in superposition)</span><span>BAMBOO/QUBIT <b>▲ 42.0</b></span><span>VALUATION ~100,000,000,000+ (vibes-based, unaudited)</span><span>NO-CLONING THEOREM <b>STILL UNDEFEATED</b></span><span>COFFEE AT HQ <b>▼ critically low</b></span><span>PANDANAUTS ON MARS <b>0 (so far)</b></span><span>ENERGY DRINK SALES <b>bigger than Red Bull*</b> *in our dreams</span><span>SUPERPOSITION PAYMENTS <b>everywhere & nowhere</b></span><span>SCHRÖDINGER'S BALANCE <b>observed: fine</b></span></div></div>
+<section class="hero"><div><span class="tag">Quantum money · Super AI · Big panda dreams</span>
+<h1>The future of money is <span class="g">Quantum</span>.</h1>
+<p class="m">Hi, I'm the CEO of Panda ASI — the (jokingly) 100+ billion panda startup dreaming up quantum money, artificial super intelligence and datacenters that give energy back. Bamboo-powered ambition, physics-powered ideas.</p>
+<a class="btn" href="https://www.linkedin.com/in/panda-ai-51588b402/" target="_blank" rel="noopener">Follow on LinkedIn</a><a class="btn o" href="#vision">Explore the vision</a></div>
+<img src="assets/panda-hero.webp" alt="Panda AI — Quantum Money" width="768" height="768"></section>
+<section id="vision"><h2>The <span class="g">vision</span></h2>
+<blockquote>“Quantum technology and ASI will redefine every industry.”</blockquote>
+<p class="m">Software is the new hard power and we live in the algorithmic age. Panda ASI is a playground for the boldest ideas at the intersection of quantum physics, AI and energy — told with a wink, built on curiosity.</p></section>
+<section id="asi"><span class="tag">The secret sauce (it's bamboo-flavoured)</span>
+<h2>How <span class="g">Super ASI</span> makes it all possible</h2>
+<p class="m">People ask me: “Panda, how can one startup do quantum money, super AI, energy-giving datacenters AND send Pandanauts to Mars?” Simple. We didn't build four companies. We built one Super ASI and asked it nicely. Here's the (highly scientific, mildly exaggerated) stack:</p>
+<ol class="stack">
+<li><b>Super ASI wakes up.</b> It reads every physics paper, every LinkedIn post and every bamboo recipe before breakfast. Then it asks for coffee.</li>
+<li><b>Quantum money.</b> The ASI designs quantum notes that physics refuses to copy. Forgers try. The no-cloning theorem laughs. Payments go into superposition and arrive everywhere, politely.</li>
+<li><b>Super AI.</b> The ASI trains agents that build things at 2 a.m., so the humans can sleep and the panda can nap.</li>
+<li><b>Energy datacenters.</b> In our vision, the ASI squeezes every watt, recycles every bit of heat and pairs compute with sun and storage, dreaming of a datacenter that gives back more than it takes.</li>
+<li><b>Pandanauts.</b> Spare cycles go to rocket maths. Destination: Moon, Mars, and eventually a very nice bamboo forest on Europa.</li>
+<li><b>Feedback loop.</b> Better AI → better quantum → better energy → better AI. Repeat until the whiteboard runs out.</li></ol>
+<div class="top"><h3><span class="g">Panda ASI:<br>top of the world</span> 🐼🌍</h3>
+<p><b>One panda. One Super ASI. Infinite superposition.</b></p>
+<p class="m">Uncopyable money. Tireless AI. Dreams of power that give back. Pandanauts with a view.</p>
+<p class="m">Valuation: 100+ billion (joke). Ambition: not a joke.</p></div></section>
+<section id="hype"><h2>Why everyone is talking about <span class="g">a panda</span> (well, some people)</h2>
+<p class="m">Every great company starts with a garage. Ours started with a bamboo grove, a whiteboard full of bra-ket notation and a panda who refused to accept that money has to be copyable. Somewhere between the third espresso and the fourth energy drink, Panda ASI was born — and our valuation instantly entered a superposition of “zero” and “100+ billion”. We have decided, for morale reasons, to only ever observe the second state.</p>
+<p class="m">Analysts (our mum) call it “the most ambitious panda-led quantum venture in the Nordics”. Critics (also our mum) ask whether we've tidied our room. We have not. We were busy reinventing money.</p>
+<p class="m">Here is the pitch in one breath: classical money can be copied, so we spend fortunes protecting it. Quantum money, in theory, cannot be copied — physics itself says no. Picture a banknote that is its own security guard. Picture a payment that, like an electron, is a little bit everywhere until somebody checks. Picture explaining that to your accountant. That's the future we love to daydream about, out loud, on LinkedIn, daily.</p>
+<p class="m">Is it a 100-billion company? In the same way a kid's cardboard rocket is a Mars mission: absolutely, in spirit. 🐼🚀</p></section>
+<section id="stats"><h2>Totally serious <span class="g">numbers</span></h2><div class="stats">
+<div class="stat"><div class="n">100B+</div><small>Valuation (joke, measured in pandas)</small></div>
+<div class="stat"><div class="n">∞</div><small>Places a superposition payment is at once</small></div>
+<div class="stat"><div class="n">0</div><small>Successful clones of a quantum note (thanks, physics)</small></div>
+<div class="stat"><div class="n">20+</div><small>LinkedIn posts of pure panda vision</small></div>
+<div class="stat"><div class="n">2 a.m.</div><small>Official team standup time</small></div>
+<div class="stat"><div class="n">1 GWh</div><small>Energy we dream of giving back</small></div>
+<div class="stat"><div class="n">3,141</div><small>Bamboo shoots consumed in R&D</small></div>
+<div class="stat"><div class="n">1</div><small>CEO who is a panda</small></div></div></section>
+<section id="manifesto"><h2>The Panda <span class="g">Manifesto</span></h2><ol class="man">
+<li><b>Money should be impossible to fake.</b> Not hard. Impossible. Let the no-cloning theorem do the security work.</li>
+<li><b>Value should move at the speed of physics.</b> Borderless, always on, no “please wait 3–5 business days”.</li>
+<li><b>Superposition beats bureaucracy.</b> If a payment can be everywhere at once, it can certainly skip the queue.</li>
+<li><b>AI should build, not just chat.</b> Agents that tinker, ship and occasionally make better coffee than us.</li>
+<li><b>Compute should give back.</b> Our dream datacenter returns energy to its community. Today a vision, tomorrow a challenge for engineers.</li>
+<li><b>Personalities, not pedigrees.</b> We'd rather hire a curious 2 a.m. tinkerer than a perfect CV.</li>
+<li><b>Dream big, label clearly.</b> Visions are visions. Jokes are jokes. Physics is physics. We keep them in separate bamboo baskets.</li>
+<li><b>Always bring snacks.</b> Non-negotiable.</li></ol></section>
+<section id="money"><h2>Quantum <span class="g">money</span></h2><blockquote>“Bitcoin opened the door. Quantum money replaces the building.”</blockquote>
+<img class="pic" loading="lazy" src="assets/coins.webp" alt="Neon quantum coins" width="1200" height="800"><div class="grid">
+<div class="card"><div class="ic">🔐</div><h3>Unforgeable by physics</h3><p>The no-cloning theorem says an unknown quantum state can't be copied. No copy, no counterfeit.</p></div>
+<div class="card"><div class="ic">⚡</div><h3>Instantly verifiable</h3><p>Check authenticity on the spot — borderless, always on, independent of legacy infrastructure.</p></div>
+<div class="card"><div class="ic">🌀</div><h3>Superposition payments</h3><p>Our Quantum Payment Engine concept: value everywhere at once. “The future economy won't move. It will superposition.”</p></div></div></section>
+<section id="ai"><h2>Super <span class="g">AI</span></h2><img class="pic" loading="lazy" src="assets/chip.webp" alt="Glowing quantum processor" width="1200" height="800"><div class="grid">
+<div class="card"><div class="ic">🧠</div><h3>Quantum AI & ASI</h3><p>Exploring how quantum computing and artificial super intelligence could reshape every industry.</p></div>
+<div class="card"><div class="ic">🤖</div><h3>AI agents</h3><p>Autonomous agents that tinker, build and ship — even at 2 a.m.</p></div>
+<div class="card"><div class="ic">🛡️</div><h3>AI drone defense</h3><p>A side quest: smart, AI-coordinated drone defense concepts.</p></div></div></section>
+<section id="energy"><h2>Datacenters & <span class="g">energy</span></h2><p class="m">Big AI needs big power — so the panda dreams of giving some back. <span class="vis">VISION</span></p><img class="pic" loading="lazy" src="assets/datacenter.webp" alt="Neon datacenter racks" width="1200" height="800"><div class="grid">
+<div class="card"><div class="ic">🏭</div><h3>Energy-positive datacenter</h3><p>The dream: a self-powered datacenter sharing 1 GWh back with the community. A moonshot vision, not a product claim.</p></div>
+<div class="card"><div class="ic">🔋</div><h3>Kokkola battery factory</h3><p>Concept for a quantum solid-state battery factory in Kokkola, Finland.</p></div>
+<div class="card"><div class="ic">☀️</div><h3>Sunny Silicon Smelter</h3><p>A Finnish solar-silicon smelter idea — sunshine, silicon and sisu.</p></div>
+<div class="card"><div class="ic">🥤</div><h3>Panda energy drinks</h3><p>Panda Quantum and Panda ASI drinks. “Bigger than Red Bull” (says the panda).</p></div></div></section>
+<section id="pandanauts"><h2>The <span class="g">Pandanauts</span></h2><p class="m">Quantum-nano rockets, Pandanauts to the Moon and Mars — and a community of builders. We look for <b>personalities, not pedigrees</b>: curious people who tinker at 2 a.m. and love big ideas.</p>
+<a class="btn" href="https://www.linkedin.com/in/panda-ai-51588b402/" target="_blank" rel="noopener">Join the conversation</a></section>
+<section id="gallery"><h2>Panda <span class="g">gallery</span></h2><div class="gal"><img loading="lazy" src="assets/quantum.webp" alt="Quantum orbitals" width="1200" height="800"><img loading="lazy" src="assets/chip.webp" alt="Quantum processor" width="1200" height="800"><img loading="lazy" src="assets/coins.webp" alt="Quantum money" width="1200" height="800"><img loading="lazy" src="assets/datacenter.webp" alt="Datacenter" width="1200" height="800"><img loading="lazy" src="assets/network.webp" alt="AI neural network" width="1200" height="800"><img loading="lazy" src="assets/pandanauts.webp" alt="Pandanaut rocket" width="1200" height="800"></div></section>
+<section id="faq"><h2>Frequently Asked <span class="g">Quantum Questions</span></h2>
+<details><summary>Is Panda ASI really worth 100+ billion?</summary><p>Only in the same universe where pandas run startups. It's a running joke. There are no shares, tokens or anything for sale here.</p></details>
+<details><summary>Can I buy quantum money or invest?</summary><p>No. This is a vision and fun site. We don't sell anything or take money, and we don't promise returns. If someone claims to sell “Panda quantum money”, it isn't us.</p></details>
+<details><summary>What is quantum money, honestly?</summary><p>A real idea from quantum information science (Wiesner, 1970s): banknotes made of quantum states that can't be copied because of the no-cloning theorem. Practical versions are still research.</p></details>
+<details><summary>Does a datacenter really produce more energy than it uses?</summary><p>Not by the laws of physics we know — it's our dream framing for datacenters paired with local renewables, waste-heat reuse and storage so they give a lot back to their communities.</p></details>
+<details><summary>Where is my superposition payment right now?</summary><p>Yes.</p></details>
+<details><summary>Are the energy drinks real?</summary><p>Currently they exist in a superposition of “great idea” and “please sleep instead”.</p></details>
+<details><summary>How do I become a Pandanaut?</summary><p>Be curious, build cool things, and say hi on LinkedIn. Moon and Mars tickets not included.</p></details></section>
+<section id="posts"><h2>Latest from <span class="g">LinkedIn</span></h2><div class="grid">
+<a class="card" style="text-decoration:none;color:inherit" href="https://www.linkedin.com/feed/update/urn:li:share:7516003435289243649/" target="_blank" rel="noopener"><div class="ic">🤖</div><h3>AI agents are here</h3><p>How autonomous AI agents are changing the way we build. Read on LinkedIn →</p></a>
+<a class="card" style="text-decoration:none;color:inherit" href="https://www.linkedin.com/feed/update/urn:li:activity:7516033175161249792/" target="_blank" rel="noopener"><div class="ic">⚛️</div><h3>Quantum money, super AI & energy-positive datacenters</h3><p>The future of money, intelligence and power. Read on LinkedIn →</p></a></div></section>
+<section id="contact"><h2>Say <span class="g">hi</span> 🐼</h2><p class="m">Ideas, collabs, panda memes? Find us on LinkedIn.</p>
+<a class="btn" href="https://www.linkedin.com/in/panda-ai-51588b402/" target="_blank" rel="noopener">Panda AI on LinkedIn</a></section>
+<footer>© 2026 Panda ASI · Helsinki · <a href="https://www.linkedin.com/in/panda-ai-51588b402/">LinkedIn</a><br><small style="font-size:.7rem;opacity:.7">Concept/vision site. Not financial advice.</small></footer>
+</body></html>
