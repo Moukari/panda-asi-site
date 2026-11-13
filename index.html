@@ -3,11 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Panda ASI — Quantum Money & Super AI</title>
-<meta name="description" content="Panda ASI: a vision of quantum money, super AI and energy-positive datacenters. Concept site.">
-<meta property="og:title" content="Panda ASI">
-<meta property="og:image" content="https://www.panda-asi.com/og-image-v2.png">
-<meta property="og:url" content="https://www.panda-asi.com/">
+<title>Panda ASI — Banks print it. Blockchains copy it. Physics protects it.</title>
+<meta name="description" content="Panda ASI: quantum money, Super ASI and energy-giving datacenters. Banks print it. Blockchains copy it. Physics protects it.">
+<meta name="theme-color" content="#0a0510">
+<meta property="og:title" content="Panda ASI — Physics protects it">
+<meta property="og:description" content="Quantum money. Super ASI. Datacenters that give energy back.">
+<meta property="og:image" content="https://panda-asi.com/og-image-v3.jpg">
+<meta property="og:url" content="https://panda-asi.com/">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="icon" href="assets/favicon.ico">
@@ -15,606 +17,90 @@
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600;700;800;900&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
 <style>
-:root{
-  --bg:#050505;
-  --bg-elev:#0b0b0b;
-  --card:#0e0e0e;
-  --line:#2a2a2a;
-  --line-strong:#3c3c3c;
-  --orange:#FD7B02;
-  --orange-deep:#c45f02;
-  --orange-soft:rgba(253,123,2,.12);
-  --orange-glow:rgba(253,123,2,.38);
-  --txt:#f3f3f3;
-  --mut:#9a9a9a;
-  --rule:#5c5c5c;
-  --steel:#121212;
-  --head:"Exo 2",Montserrat,system-ui,sans-serif;
-  --ui:Montserrat,"Exo 2",system-ui,sans-serif;
-}
+:root{--bg:#07040c;--pink:#ff2d87;--orange:#ff7a1a;--yellow:#ffd23f;--teal:#0e4d5c;--txt:#f4eef2;--mut:#b3a3b0;
+--grad:linear-gradient(180deg,var(--yellow) 0%,var(--orange) 50%,var(--pink) 100%);
+--anton:Anton,Impact,"Arial Narrow",sans-serif;--ui:Montserrat,system-ui,sans-serif}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-html,body{background:var(--bg);color:var(--txt);overflow-x:hidden}
-body{
-  margin:0;
-  font-family:var(--ui);
-  font-weight:400;
-  line-height:1.65;
-  background-color:var(--bg);
-  background-image:
-    linear-gradient(rgba(255,255,255,.017) 1px,transparent 1px),
-    linear-gradient(90deg,rgba(255,255,255,.017) 1px,transparent 1px),
-    radial-gradient(ellipse 80% 50% at 50% -10%,rgba(253,123,2,.08),transparent 55%),
-    linear-gradient(#0a0a0a,#000);
-  background-size:56px 56px,56px 56px,100% 80vh,100% 100%;
-  background-attachment:fixed,fixed,scroll,scroll;
-}
-a{color:var(--orange);text-decoration-thickness:1px;text-underline-offset:.18em}
-a:hover{color:#fff}
+body{margin:0;background:var(--bg);color:var(--txt);font-family:var(--ui);font-weight:500;line-height:1.55;overflow-x:hidden}
+body:after{content:"";position:fixed;inset:0;pointer-events:none;z-index:50;
+background:radial-gradient(ellipse at center,transparent 55%,rgba(0,0,0,.55) 100%);}
+a{color:var(--yellow)}
 img{max-width:100%;height:auto;display:block}
-
-/* ——— NAV ——— */
-nav{
-  position:sticky;top:0;z-index:20;
-  display:flex;justify-content:space-between;align-items:center;gap:1.5rem;
-  padding:.55rem 4vw;
-  background:rgba(0,0,0,.92);
-  backdrop-filter:blur(12px);
-  border-bottom:1px solid var(--line);
-  box-shadow:0 1px 0 rgba(253,123,2,.35);
-}
-nav .brand{display:flex;align-items:center;flex:0 0 auto;text-decoration:none}
-nav .brand img{height:52px;width:auto;display:block}
-nav .l{display:flex;flex-wrap:wrap;justify-content:flex-end;align-items:center;gap:.15rem .05rem}
-nav .l a{
-  color:var(--mut);
-  text-decoration:none;
-  margin-left:.55rem;
-  font-size:.64rem;
-  font-weight:600;
-  letter-spacing:.1em;
-  text-transform:uppercase;
-  white-space:nowrap;
-}
-nav .l a:hover{color:var(--orange)}
-.burger{display:none;cursor:pointer;width:42px;height:42px;border:1px solid var(--line-strong);background:transparent;padding:0;position:relative;flex:0 0 auto;flex-direction:column;justify-content:center;align-items:center;gap:5px}
-.burger span{display:block;width:18px;height:2px;background:#fff;transition:transform .2s,opacity .2s;position:relative}
-#nav-toggle{position:absolute;opacity:0;pointer-events:none}
-
-/* ——— TICKER ——— */
-.tick{
-  overflow:hidden;white-space:nowrap;
-  border-block:1px solid var(--line);
-  background:#080808;
-  padding:.55rem 0;
-  font-family:var(--head);
-  font-size:.78rem;
-  letter-spacing:.08em;
-  text-transform:uppercase;
-}
-.tick div{display:inline-block;animation:sc 60s linear infinite;padding-left:100%}
-.tick span{margin-right:2.5rem;color:#b5b5b5}
-.tick b{color:var(--orange);font-weight:700}
-@keyframes sc{to{transform:translateX(-100%)}}
-@media (prefers-reduced-motion:reduce){.tick div{animation:none;padding-left:1rem}}
-
-/* ——— TYPE ——— */
-section{padding:5rem 5vw;max-width:1200px;margin:auto;scroll-margin-top:5.5rem}
-h1,h2,h3{font-family:var(--head);font-weight:800;line-height:1.08;letter-spacing:.01em;color:#fff}
-h1{font-size:clamp(2.5rem,6.2vw,4.6rem);margin:.25em 0 .2em;text-transform:uppercase;letter-spacing:.02em}
-h2{font-size:clamp(1.7rem,3.8vw,2.55rem);margin:0 0 1.1rem;text-transform:uppercase;letter-spacing:.04em}
-h3{font-size:1.12rem;letter-spacing:.04em;text-transform:uppercase;margin:.35rem 0}
-.g{color:var(--orange);background:none;-webkit-text-fill-color:unset}
-p.m,.card p,details p{color:var(--mut)}
-p{margin:.75rem 0}
-
-/* ruled industrial labels */
-.tag{
-  display:inline-flex;align-items:center;gap:.85rem;
-  padding:0;border:0;border-radius:0;color:#b3b3b3;
-  font-family:var(--ui);font-size:.68rem;font-weight:600;
-  letter-spacing:.18em;text-transform:uppercase;line-height:1.3;
-  white-space:nowrap;max-width:100%;
-}
-.tag:before,.tag:after{content:"";display:block;width:2.1rem;height:1px;background:var(--rule);flex:0 0 auto}
-
-/* ——— HERO ——— */
-.hero{
-  display:grid;
-  grid-template-columns:1fr 1.15fr;
-  gap:3rem;
-  align-items:center;
-  min-height:min(78vh,740px);
-  padding-top:2.6rem;
-  padding-bottom:3.2rem;
-  position:relative;
-}
-.hero-copy{position:relative;z-index:1}
-.hero-logo{
-  display:block;width:min(100%,420px);height:auto;margin:0 0 1.4rem;
-  filter:drop-shadow(0 0 24px rgba(253,123,2,.25));
-}
-.hero-visual{position:relative}
-.hero-visual:before,
-.hero-visual:after{
-  content:"";position:absolute;width:28px;height:28px;pointer-events:none;z-index:2;
-  border:2px solid var(--orange);
-}
-.hero-visual:before{top:-6px;left:-6px;border-right:0;border-bottom:0}
-.hero-visual:after{bottom:-6px;right:-6px;border-left:0;border-top:0}
-.hero img.hero-art{
-  width:100%;height:auto;object-fit:contain;
-  border-radius:0;border:1px solid var(--line-strong);
-  box-shadow:0 0 0 1px #000,0 0 80px rgba(253,123,2,.18);
-  background:#000;
-}
-.hero-visual .circuit{
-  position:absolute;inset:auto -18px -18px auto;width:140px;height:140px;opacity:.85;pointer-events:none;z-index:3;
-}
-
-.slogan{
-  font-family:var(--head);
-  font-size:clamp(1.15rem,2.3vw,1.7rem);
-  font-weight:800;
-  line-height:1.35;
-  letter-spacing:.02em;
-  color:#fff;
-  margin:1.4rem 0 1.5rem;
-  padding:1.15rem 1.35rem;
-  background:
-    linear-gradient(90deg,var(--orange-soft),transparent 70%),
-    var(--steel);
-  border:1px solid var(--line-strong);
-  border-left:3px solid var(--orange);
-  position:relative;
-}
-
-.btn{
-  display:inline-block;
-  margin:.45rem .65rem 0 0;
-  padding:.85rem 1.45rem;
-  border-radius:0;
-  text-decoration:none;
-  font-family:var(--ui);
-  font-weight:700;
-  font-size:.72rem;
-  letter-spacing:.16em;
-  text-transform:uppercase;
-  color:#000;
-  background:var(--orange);
-  border:1px solid var(--orange);
-  transition:background .15s,color .15s,border-color .15s,box-shadow .15s;
-}
-.btn:hover{background:#fff;border-color:#fff;color:#000;box-shadow:0 0 24px var(--orange-glow)}
-.btn.o{background:transparent;color:#fff;border:1px solid #5a5a5a}
-.btn.o:hover{background:transparent;color:var(--orange);border-color:var(--orange);box-shadow:none}
-
-/* ——— CARDS / GRIDS ——— */
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.1rem}
-.card{
-  background:var(--card);
-  border:1px solid var(--line);
-  border-radius:0;
-  padding:1.45rem 1.35rem;
-  transition:border-color .2s,box-shadow .2s,transform .2s;
-  position:relative;
-}
-.card:before{
-  content:"";position:absolute;top:0;left:0;width:3px;height:100%;background:var(--orange);opacity:0;transition:.2s;
-}
-.card:hover{border-color:var(--orange);box-shadow:0 0 28px rgba(253,123,2,.18);transform:translateY(-2px)}
-.card:hover:before{opacity:1}
-.ic{font-size:1.7rem;line-height:1;margin-bottom:.2rem}
-.pricing{display:grid;grid-template-columns:repeat(4,1fr);gap:1.1rem;margin:1.6rem 0 1.2rem;align-items:stretch}
-.pricing .card{display:flex;flex-direction:column;padding:1.5rem 1.3rem 1.4rem;height:auto;align-self:stretch;box-sizing:border-box;border-color:var(--line-strong)}
-.pricing .card p{flex:1;margin-bottom:0}
-.pricing .card .amount{
-  font-family:var(--head);font-weight:800;font-size:clamp(2rem,3vw,2.6rem);
-  color:#fff;letter-spacing:.02em;line-height:1;margin:.4rem 0 .55rem;
-}
-.pricing .card.feature{border:1px solid var(--orange);background:linear-gradient(180deg,var(--orange-soft),var(--card) 42%);box-shadow:0 0 28px rgba(253,123,2,.12)}
-.pricing .card.feature:before{opacity:1}
-.pricing .card.feature .amount{color:var(--orange)}
-.pricing .card .eyebrow{
-  font-size:.65rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--rule);
-}
-.pricing .card.feature .eyebrow{color:var(--orange)}
-@media(max-width:980px){.pricing{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:520px){.pricing{grid-template-columns:1fr}}
-
-blockquote{
-  border-left:3px solid var(--orange);
-  margin:1.5rem 0;
-  padding:.85rem 1.2rem;
-  font-family:var(--head);
-  font-size:clamp(1.15rem,2vw,1.4rem);
-  font-style:normal;
-  font-weight:600;
-  line-height:1.4;
-  color:#fff;
-  background:linear-gradient(90deg,var(--orange-soft),transparent 75%);
-}
-
-.pic{
-  width:100%;border-radius:0;margin:1.2rem 0;
-  border:1px solid var(--line-strong);
-  box-shadow:0 0 40px rgba(253,123,2,.1);
-  aspect-ratio:3/2;object-fit:cover;
-}
-.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem}
-.gal img{
-  width:100%;border-radius:0;aspect-ratio:3/2;object-fit:cover;
-  border:1px solid var(--line);max-height:none;
-  filter:grayscale(.15) contrast(1.05);
-  transition:filter .2s,border-color .2s;
-}
-.gal img:hover{filter:none;border-color:var(--orange)}
-.vis{
-  font-size:.65rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
-  color:var(--orange);border:1px solid var(--orange);border-radius:0;
-  padding:.15rem .45rem;vertical-align:middle;
-}
-
-/* ——— STATS ——— */
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
-.stat{
-  background:var(--card);border-radius:0;padding:1.5rem 1.1rem 1.3rem;
-  text-align:center;border:1px solid var(--line);position:relative;
-}
-.stat:after{
-  content:"";position:absolute;left:20%;right:20%;bottom:0;height:2px;background:var(--orange);opacity:.8;
-}
-.stat .n{
-  font-family:var(--head);font-size:2.35rem;font-weight:800;
-  color:var(--orange);letter-spacing:.02em;line-height:1.1;
-  background:none;-webkit-text-fill-color:unset;
-}
-.stat small{color:var(--mut);font-size:.78rem;letter-spacing:.03em;text-transform:none}
-
-/* ——— LISTS ——— */
-ol.man{counter-reset:m;list-style:none;padding:0;margin:0}
-ol.man li{
-  counter-increment:m;margin:1rem 0;padding:1.1rem 1.2rem 1.1rem 4.2rem;
-  position:relative;background:var(--card);border-radius:0;border:1px solid var(--line);
-}
-ol.man li:before{
-  content:counter(m,decimal-leading-zero);
-  position:absolute;left:1rem;top:1.05rem;
-  font-family:var(--head);font-weight:800;color:var(--orange);font-size:1.05rem;letter-spacing:.06em;
-}
-.stack{counter-reset:k;list-style:none;padding:0;display:grid;gap:.8rem;margin:1.2rem 0}
-.stack li{
-  counter-increment:k;background:#080808;border:1px solid var(--line);
-  border-radius:0;padding:1rem 1.2rem 1rem 4.4rem;position:relative;
-}
-.stack li:before{
-  content:"L" counter(k);
-  position:absolute;left:1rem;top:.95rem;
-  font-family:var(--head);font-weight:800;font-size:1.15rem;color:var(--orange);letter-spacing:.04em;
-}
-
-#asi{
-  background:
-    linear-gradient(180deg,rgba(253,123,2,.05),transparent 40%),
-    var(--steel);
-  border:1px solid var(--line-strong);
-  border-top:2px solid var(--orange);
-  border-radius:0;
-  margin-block:2rem;
-  max-width:1200px;
-}
-.top{text-align:center;margin-top:2.6rem;padding-top:2rem;border-top:1px solid var(--line)}
-.top h3{font-size:clamp(2.1rem,5.5vw,3.8rem);margin:.2em 0;line-height:1.05;text-transform:uppercase}
-.top p{font-size:1.12rem;margin:.35rem}
-
-/* ——— FAQ ——— */
-details{
-  background:var(--card);border-radius:0;padding:1rem 1.2rem;margin:.7rem 0;
-  border:1px solid var(--line);
-}
-details[open]{border-color:var(--orange-deep)}
-summary{cursor:pointer;font-weight:700;font-family:var(--head);letter-spacing:.03em;list-style:none}
-summary::-webkit-details-marker{display:none}
-summary:before{content:"+";color:var(--orange);font-weight:800;margin-right:.7rem;font-family:var(--head)}
-details[open] summary:before{content:"–"}
-
-/* ——— FOOTER ——— */
-footer{
-  padding:2.4rem 5vw 2.8rem;
-  border-top:1px solid var(--line);
-  text-align:center;color:var(--mut);font-size:.85rem;
-  background:#000;
-  letter-spacing:.02em;
-}
-footer small{display:inline-block;margin-top:.4rem;letter-spacing:.08em;text-transform:uppercase;font-size:.68rem!important;opacity:.7}
-footer a[href^="mailto"]{white-space:nowrap}
-
-/* section rule under headings that don't have a tag */
-section>h2{position:relative;padding-bottom:.7rem}
-section>h2:after{
-  content:"";display:block;width:4rem;height:2px;background:var(--orange);margin-top:.7rem;
-}
-
-/* decorative top circuit line on body edge */
-body:before{
-  content:"";pointer-events:none;position:fixed;inset:0 auto 0 0;width:3px;z-index:30;
-  background:linear-gradient(180deg,transparent,var(--orange),transparent);
-  opacity:.55;
-}
-
-@media(max-width:980px){
-  nav{flex-wrap:wrap;padding:.5rem 5vw}
-  nav .brand img{height:42px}
-  .burger{display:flex}
-  nav .l{
-    display:none;flex-basis:100%;flex-direction:column;align-items:flex-start;
-    padding:0 0 .8rem;border-top:1px solid var(--line);margin-top:.2rem;
-  }
-  nav .l a{margin:0;padding:.65rem 0;border-bottom:1px solid var(--line);width:100%;font-size:.78rem}
-  #nav-toggle:checked ~ .l{display:flex}
-  #nav-toggle:checked + .burger span:nth-child(1){transform:translateY(7px) rotate(45deg)}
-  #nav-toggle:checked + .burger span:nth-child(2){opacity:0}
-  #nav-toggle:checked + .burger span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-  .hero{grid-template-columns:1fr;min-height:auto;padding-top:2.2rem;gap:2rem}
-  .hero-logo{width:min(100%,340px);margin-bottom:1.1rem}
-  section{padding:3.4rem 6vw;scroll-margin-top:4.5rem}
-  h1{font-size:clamp(2.1rem,10vw,3.2rem)}
-  .stats{grid-template-columns:repeat(2,1fr)}
-  .gal{grid-template-columns:repeat(2,1fr)}
-  .hero-visual .circuit{right:0;bottom:0}
-}
-@media(max-width:520px){
-  nav .brand img{height:34px}
-  .tag{font-size:.58rem;letter-spacing:.1em;gap:.45rem;white-space:nowrap}
-  .tag:before,.tag:after{width:.85rem}
-  .btn{display:block;text-align:center;margin:.5rem 0 0}
-}
+.grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;
+filter:drop-shadow(0 4px 0 rgba(0,0,0,.55)) drop-shadow(0 0 22px rgba(255,45,135,.35))}
+h1,h2,h3{font-family:var(--anton);font-weight:400;text-transform:uppercase;letter-spacing:.015em;line-height:1.02;margin:0}
+/* HERO */
+.hero{position:relative;min-height:min(100svh,860px);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;
+padding:4rem 5vw 5rem;overflow:hidden;
+background:
+ radial-gradient(ellipse 90% 55% at 50% 100%,rgba(255,122,26,.55) 0%,rgba(255,45,135,.35) 35%,transparent 70%),
+ linear-gradient(180deg,#07040c 0%,#150a24 45%,#3a1233 75%,#7a2440 100%)}
+.hero:before{content:"";position:absolute;left:0;right:0;bottom:0;height:34%;pointer-events:none;
+background:linear-gradient(0deg,rgba(14,77,92,.75),transparent)}
+.hero:after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.12;mix-blend-mode:overlay;
+background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)'/%3E%3C/svg%3E")}
+.hero>*{position:relative;z-index:2}
+.logo{width:min(46vw,260px);mix-blend-mode:screen;margin-bottom:1.4rem}
+.hero h1{font-size:clamp(2.4rem,8.6vw,6.2rem)}
+.hero h1 span{display:block}
+.cta{margin-top:1.8rem;display:inline-block;font-family:var(--anton);text-transform:uppercase;letter-spacing:.08em;font-size:1.05rem;
+color:#07040c;background:var(--grad);padding:.8rem 1.8rem;text-decoration:none;box-shadow:0 6px 0 rgba(0,0,0,.5),0 0 30px rgba(255,45,135,.4)}
+.cta:hover{filter:brightness(1.1)}
+/* SECTIONS */
+section{max-width:1000px;margin:auto;padding:4.5rem 5vw}
+h2{font-size:clamp(2rem,6vw,3.4rem);margin-bottom:1.4rem}
+.vid{position:relative;aspect-ratio:16/9;border:2px solid rgba(255,122,26,.7);box-shadow:0 0 0 1px #000,0 0 60px rgba(255,45,135,.35);background:#000}
+.vid iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.vision{text-align:center}
+.vision p{font-family:var(--anton);text-transform:uppercase;font-size:clamp(1.5rem,4.6vw,2.6rem);line-height:1.15;margin:0}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;padding-top:0}
+.card{padding:1.5rem 1.2rem;border:1px solid rgba(255,255,255,.12);background:linear-gradient(160deg,rgba(255,45,135,.14),rgba(14,77,92,.25));text-align:center}
+.card h3{font-size:1.7rem;margin-bottom:.4rem}
+.card p{margin:0;color:var(--mut)}
+.week{text-align:center}
+.week small{display:block;font-family:var(--ui);font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--pink);margin-bottom:.6rem}
+.week p{max-width:46ch;margin:.8rem auto 0;color:var(--mut)}
+footer{text-align:center;padding:3rem 5vw 4rem;border-top:1px solid rgba(255,255,255,.1);color:var(--mut);font-size:.9rem}
+footer .grad{font-family:var(--anton);text-transform:uppercase;font-size:1.3rem;letter-spacing:.05em;display:block;margin-bottom:.6rem}
+@media(max-width:720px){.cards{grid-template-columns:1fr}section{padding:3.2rem 6vw}}
+@media(prefers-reduced-motion:no-preference){.logo{animation:fl 5s ease-in-out infinite}@keyframes fl{50%{transform:translateY(-8px)}}}
 </style>
 </head>
 <body>
-<nav>
-  <a class="brand" href="#top" id="top"><img src="panda-logo-tight.png" alt="Panda AI — AI Technology Solutions"></a>
-  <input type="checkbox" id="nav-toggle">
-  <label class="burger" for="nav-toggle" aria-label="Open menu"><span></span><span></span><span></span></label>
-  <div class="l">
-    <a href="#vision">Vision</a>
-    <a href="#asi">Super ASI</a>
-    <a href="#oldnews">Old vs new</a>
-    <a href="#money">Quantum Money</a>
-    <a href="#ai">Super AI</a>
-    <a href="#energy">Energy</a>
-    <a href="#pricing">Pricing</a>
-    <a href="#space">Space program</a>
-    <a href="#manifesto">Manifesto</a>
-    <a href="#faq">FAQ</a>
-    <a href="#contact">Contact</a>
-  </div>
-</nav>
-<div class="tick" aria-label="Ticker"><div><span>PANDA ASI <b>QUANTUM MONEY</b></span><span>VALUATION ~100,000,000,000+ (vision)</span><span>NO-CLONING THEOREM <b>STILL UNDEFEATED</b></span><span>SUPERPOSITION PAYMENTS <b>everywhere, every time, at once</b></span><span>SUPER ASI <b>THE STACK</b></span><span>ENERGY-POSITIVE DATACENTERS <b>VISION</b></span><span>SPACE PROGRAM <b>MOON &amp; MARS</b></span><span>BANKS PRINT IT. BLOCKCHAINS COPY IT. <b>PHYSICS PROTECTS IT.</b></span><span>HELSINKI <b>PANDA ASI</b></span><span>PANDA ASI <b>QUANTUM MONEY</b></span><span>VALUATION ~100,000,000,000+ (vision)</span><span>NO-CLONING THEOREM <b>STILL UNDEFEATED</b></span><span>SUPERPOSITION PAYMENTS <b>everywhere, every time, at once</b></span><span>SUPER ASI <b>THE STACK</b></span><span>ENERGY-POSITIVE DATACENTERS <b>VISION</b></span><span>SPACE PROGRAM <b>MOON &amp; MARS</b></span><span>BANKS PRINT IT. BLOCKCHAINS COPY IT. <b>PHYSICS PROTECTS IT.</b></span><span>HELSINKI <b>PANDA ASI</b></span></div></div>
+<header class="hero" id="top">
+<img class="logo" src="assets/panda-logo-gta.webp" width="640" height="640" alt="Panda ASI logo: a panda with red eyes and bared teeth">
+<h1 class="grad"><span>Banks print it.</span><span>Blockchains copy it.</span><span>Physics protects it.</span></h1>
+<a class="cta" href="#watch">Watch</a>
+</header>
 
-<section class="hero">
-  <div class="hero-copy">
-    <span class="tag">Quantum money · Super AI · Energy</span>
-    <h1>The future of money is <span class="g">Quantum</span>.</h1>
-    <p class="m">Hi, I'm the CEO of Panda ASI — the 100+ billion company building quantum money, artificial super intelligence and datacenters that give energy back. Physics is the security model. The vision is the scale.</p>
-    <p class="slogan">“Banks print it. Blockchains copy it. Quantum physics protects it.”</p>
-    <a class="btn" href="#contact">Contact</a>
-    <a class="btn o" href="#vision">Explore the vision</a>
-  </div>
-  <div class="hero-visual">
-    <img class="hero-art" src="assets/panda-hero.webp" alt="Panda AI — Quantum Money" width="1600" height="900">
-    <svg class="circuit" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <path d="M10 130 H70 V90 H110 V50 H130" stroke="#FD7B02" stroke-width="2"/>
-      <circle cx="70" cy="130" r="3.5" fill="#FD7B02"/>
-      <circle cx="70" cy="90" r="3.5" fill="#FD7B02"/>
-      <circle cx="110" cy="90" r="3.5" fill="#FD7B02"/>
-      <circle cx="110" cy="50" r="3.5" fill="#FD7B02"/>
-      <circle cx="130" cy="50" r="3.5" fill="#FD7B02"/>
-      <path d="M40 130 V110 H20" stroke="#FD7B02" stroke-width="2"/>
-      <circle cx="20" cy="110" r="3.5" fill="#FD7B02"/>
-    </svg>
-  </div>
+<section id="watch">
+<div class="vid">
+<iframe src="https://www.youtube-nocookie.com/embed/wi3X5kNKfX8?rel=0" title="Quantum Money: Physics Protects It" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 </section>
 
-<section id="vision">
-  <h2>The <span class="g">vision</span></h2>
-  <blockquote>“Quantum technology and ASI will redefine every industry.”</blockquote>
-  <p class="m">Software is the new hard power, the algorithmic age is turning into the age of AI agents, and those agents will need money that physics itself protects. Panda ASI is built for the hardest problems at the intersection of quantum physics, AI and energy — physics first, ambition without a ceiling.</p>
+<section class="vision">
+<p class="grad">Quantum money, Super ASI and datacenters that give energy back.</p>
 </section>
 
-<section id="news">
-  <span class="tag">This week at Panda ASI · 13 Nov 2026</span>
-  <h2>Agents are getting <span class="g">wallets</span></h2>
-  <p class="m">This week the AI conversation moved from chatbots to agents that act: booking, buying, negotiating and paying on their own. That is the real tech revolution. When millions of AI agents start moving value between each other, the question is no longer how smart they are, but what money they can trust. A balance that can be copied, frozen or reprinted is not good enough for a machine economy that never sleeps.</p>
-  <p class="m">At Panda ASI we are building for that moment. Quantum money works everywhere, at every time, simultaneously, because it is based on quantum theory, and the no-cloning theorem makes every unit one of a kind. Super ASI writes the rules, energy-smart datacenters run the network, and physics does the security. Central banks printing and blockchains copying are old news. The next economy needs money that nature itself protects. Banks print it. Blockchains copy it. Physics protects it. — The Panda CEO 🐼</p>
+<section class="cards">
+<div class="card"><h3 class="grad">Quantum money</h3><p>A quantum state can't be copied.</p></div>
+<div class="card"><h3 class="grad">Super ASI</h3><p>One mind that builds it all.</p></div>
+<div class="card"><h3 class="grad">Datacenters</h3><p>Compute that gives energy back.</p></div>
 </section>
 
-<section id="asi">
-  <span class="tag">The stack</span>
-  <h2>How <span class="g">Super ASI</span> makes it all possible</h2>
-  <p class="m">People ask how one company can build quantum money, Super AI, energy-giving datacenters and a space program. We are not four companies. We are one Super ASI. This is the stack:</p>
-  <ol class="stack">
-    <li><b>Super ASI comes online.</b> It is trained on the full body of physics, computation and markets — then it starts to design.</li>
-    <li><b>Quantum money.</b> The ASI designs quantum notes that physics itself refuses to copy. The no-cloning theorem is the security model. Payments work everywhere, at every time, simultaneously.</li>
-    <li><b>Super AI.</b> The ASI trains agents that design, build and ship around the clock.</li>
-    <li><b>Energy datacenters.</b> In our vision, the ASI squeezes every watt, recycles every bit of heat and pairs compute with sun and storage — a datacenter that gives back more than it takes.</li>
-    <li><b>Space program.</b> Super ASI also works the flight mathematics. Destination: the Moon, then Mars.</li>
-    <li><b>Feedback loop.</b> Better AI → better quantum → better energy → better AI. Each cycle compounds the last.</li>
-  </ol>
-  <div class="top">
-    <h3><span class="g">Panda ASI:<br>top of the world</span> 🐼🌍</h3>
-    <p><b>One panda. One Super ASI. Infinite superposition.</b></p>
-    <p class="m">Uncopyable money. Autonomous AI. Datacenters that give energy back. A space program with a destination.</p>
-    <p class="m">Vision: 100+ billion. Ambition: unlimited.</p>
-  </div>
+<section class="week">
+<small>This week · 13 Nov 2026</small>
+<h2 class="grad">Agents are getting wallets</h2>
+<p>AI agents will pay each other. They'll need money that can't be copied.</p>
 </section>
 
-<section id="hype">
-  <h2>The panda behind the next era of <span class="g">money</span></h2>
-  <p class="m">Panda ASI began with a hard refusal: that money has to be copyable. We started from the physics — the no-cloning theorem, a whiteboard of bra-ket notation, and a clear 100+ billion vision. Classical money can be printed and copied. Quantum money, in theory, cannot. That is the company we are building.</p>
-  <p class="m">We call it the most ambitious quantum money venture in the Nordics, and we mean it. While others argue about which ledger copies money best, we are working on money that cannot be copied at all.</p>
-  <p class="m">Here is the pitch in one breath: classical money can be copied, so we spend fortunes protecting it. Quantum money, in theory, cannot be copied — physics itself says no. A banknote that is its own security guard. A payment that, like an electron, is everywhere until it is used. That is the future we are building.</p>
-  <p class="m">Is it a 100-billion company? That is the vision, and we are building toward it one breakthrough at a time. Quantum money, Super ASI and energy-smart compute are where the next era of value begins. 🐼🚀</p>
-</section>
-
-<section id="stats">
-  <h2>The scale of the <span class="g">vision</span></h2>
-  <div class="stats">
-    <div class="stat"><div class="n">100B+</div><small>Valuation vision</small></div>
-    <div class="stat"><div class="n">∞</div><small>Places a superposition payment is at once</small></div>
-    <div class="stat"><div class="n">0</div><small>Successful clones of a quantum note — prevented by physics</small></div>
-    <div class="stat"><div class="n">20+</div><small>Public notes on the vision</small></div>
-    <div class="stat"><div class="n">24/7</div><small>Agents that build and ship</small></div>
-    <div class="stat"><div class="n">1 GWh</div><small>Energy given back to the community (vision)</small></div>
-    <div class="stat"><div class="n">HEL</div><small>Headquarters in Helsinki</small></div>
-    <div class="stat"><div class="n">1</div><small>CEO who is a panda</small></div>
-  </div>
-</section>
-
-<section id="manifesto">
-  <h2>The Panda <span class="g">Manifesto</span></h2>
-  <ol class="man">
-    <li><b>Money should be impossible to fake.</b> Not hard. Impossible. Let the no-cloning theorem do the security work.</li>
-    <li><b>Value should move at the speed of physics.</b> Borderless, always on, no “please wait 3–5 business days”.</li>
-    <li><b>Superposition beats bureaucracy.</b> If value can be everywhere at once, it does not wait in a queue.</li>
-    <li><b>AI should build, not just chat.</b> Agents that design, build and ship — not conversation for its own sake.</li>
-    <li><b>Compute should give back.</b> Our dream datacenter returns energy to its community. Today a vision, tomorrow a challenge for engineers.</li>
-    <li><b>Personalities, not pedigrees.</b> We hire for curiosity and the will to work on hard problems, not for a perfect CV.</li>
-    <li><b>Dream big, label clearly.</b> Visions are labelled as visions. Physics is labelled as physics. We do not mix the two.</li>
-    <li><b>Build for the long horizon.</b> A 100+ billion vision is earned in physics, engineering and time.</li>
-  </ol>
-</section>
-
-<section id="oldnews">
-  <h2>Old money is <span class="g">old news</span></h2>
-  <p class="m">Every era gets the money it deserves. The quantum era deserves better than spreadsheets and printing presses.</p>
-  <div class="grid">
-    <div class="card"><div class="ic">🏦</div><h3>Banks printing money</h3><p>Central banks press a button and new money appears, and your savings quietly shrink. That's 20th-century tech running a 21st-century economy.</p></div>
-    <div class="card"><div class="ic">⛓️</div><h3>Blockchains</h3><p>Thousands of computers copying the same ledger over and over just to agree who owns what. Clever, but it's still copying, and quantum money is built so it can't be copied.</p></div>
-    <div class="card"><div class="ic">₿</div><h3>Bitcoin</h3><p>A legend that opened the door. But it burns energy to stay secure, and a powerful enough quantum computer threatens the cryptography it relies on. Respect to the pioneer, but the next chapter is quantum.</p></div>
-    <div class="card"><div class="ic">⚛️</div><h3>Quantum money</h3><p>Security from the laws of physics, not from bigger mining farms or trust in a printing press. No-cloning means no counterfeits, and verification is instant.</p></div>
-  </div>
-  <blockquote>“Banks print it. Blockchains copy it. Quantum physics protects it.” — Panda ASI</blockquote>
-</section>
-
-<section id="money">
-  <h2>Quantum <span class="g">money</span></h2>
-  <blockquote>“Bitcoin opened the door. Quantum money replaces the building.”</blockquote>
-  <img class="pic" loading="lazy" src="assets/coins.webp" alt="Neon quantum coins" width="1200" height="800">
-  <div class="grid">
-    <div class="card"><div class="ic">🔐</div><h3>Unforgeable by physics</h3><p>The no-cloning theorem says an unknown quantum state can't be copied. No copy, no counterfeit.</p></div>
-    <div class="card"><div class="ic">⚡</div><h3>Instantly verifiable</h3><p>Check authenticity on the spot — borderless, always on, independent of legacy infrastructure.</p></div>
-    <div class="card"><div class="ic">🌀</div><h3>Superposition payments</h3><p>Our Quantum Payment Engine concept: value everywhere at once. “The future economy won't move. It will superposition.”</p></div>
-  </div>
-</section>
-
-<section id="everywhere">
-  <h2>Everywhere. Every time. <span class="g">At once.</span></h2>
-  <p class="m">Classical money lives in one place at a time: a vault, a bank account, a single block on a chain. Quantum theory describes something stranger, and that's where the Panda vision starts.</p>
-  <div class="grid">
-    <div class="card"><div class="ic">🌀</div><h3>Superposition</h3><p>A quantum state can hold many possibilities at once until it's measured. Our vision is value that exists as potential everywhere and only settles at the moment it's used.</p></div>
-    <div class="card"><div class="ic">🔗</div><h3>Entanglement</h3><p>Entangled particles stay correlated no matter how far apart they are. We're imagining payment rails where both sides of a deal stay linked across the planet, with no middleman in between.</p></div>
-    <div class="card"><div class="ic">🕒</div><h3>Always on</h3><p>No banking hours, no borders and no waiting for blocks. Value is checked against physics itself, so it can be verified anywhere and at any time.</p></div>
-    <div class="card"><div class="ic">🛡️</div><h3>Can't be copied</h3><p>Whatever happens, the no-cloning theorem holds: a quantum note can't be duplicated. Being everywhere at once never means existing twice.</p></div>
-  </div>
-  <blockquote>“The future economy won't move. It will superposition.” — Panda ASI</blockquote>
-</section>
-
-<section id="ai">
-  <h2>Super <span class="g">AI</span></h2>
-  <img class="pic" loading="lazy" src="assets/chip.webp" alt="Glowing quantum processor" width="1200" height="800">
-  <div class="grid">
-    <div class="card"><div class="ic">🧠</div><h3>Quantum AI & ASI</h3><p>Exploring how quantum computing and artificial super intelligence could reshape every industry.</p></div>
-    <div class="card"><div class="ic">🤖</div><h3>AI agents</h3><p>Autonomous agents that design, build and ship around the clock.</p></div>
-    <div class="card"><div class="ic">🛡️</div><h3>AI drone defense</h3><p>A parallel track: AI-coordinated drone defense concepts.</p></div>
-  </div>
-</section>
-
-<section id="energy">
-  <h2>Datacenters & <span class="g">energy</span></h2>
-  <p class="m">Big AI needs big power. Our vision is to give some of it back. <span class="vis">VISION</span></p>
-  <img class="pic" loading="lazy" src="assets/datacenter.webp" alt="Neon datacenter racks" width="1200" height="800">
-  <div class="grid">
-    <div class="card"><div class="ic">🏭</div><h3>Energy-positive datacenter</h3><p>The vision: a self-powered datacenter sharing 1 GWh back with the community. A long-horizon aim, not a product claim.</p></div>
-    <div class="card"><div class="ic">🔋</div><h3>Kokkola battery factory</h3><p>Concept for a quantum solid-state battery factory in Kokkola, Finland.</p></div>
-    <div class="card"><div class="ic">☀️</div><h3>Sunny Silicon Smelter</h3><p>A Finnish solar-silicon smelter idea — sunshine, silicon and sisu.</p></div>
-    <div class="card"><div class="ic">🥤</div><h3>Panda energy drinks</h3><p>Panda Quantum and Panda ASI — a brand and product concept for energy drinks, not a line you can buy today.</p></div>
-  </div>
-</section>
-
-<section id="pricing">
-  <span class="tag">Pricing model · a vision</span>
-  <h2>The reference price is <span class="g">energy</span></h2>
-  <p class="m">Today the price of compute is the price of energy. Datacenters bill you for every watt, banks take a cut of every transfer, and blockchains burn power just to agree who owns what. That is old news.</p>
-  <p class="m">At Panda ASI the reference point is still energy — but our quantum energy is free. In this vision, Panda ASI datacenters do not charge you for power. They give energy back, and they give money back. The datacenter is not a bill. It is a dividend.</p>
-  <div class="pricing">
-    <div class="card">
-      <div class="eyebrow">Old news</div>
-      <div class="amount">Pay / kWh</div>
-      <h3>Energy-priced compute</h3>
-      <p>Today you pay for every watt. The bigger the model, the bigger the invoice. That is the old meter, still running a new economy.</p>
-    </div>
-    <div class="card">
-      <div class="eyebrow">Old news</div>
-      <div class="amount">Fees</div>
-      <h3>Banks &amp; blockchains</h3>
-      <p>Banks print it. Blockchains copy it — and both still charge you to move it. Security from trust, or from burning energy. We can do better.</p>
-    </div>
-    <div class="card feature">
-      <div class="eyebrow">Panda ASI vision</div>
-      <div class="amount">€0</div>
-      <h3>Energy cost</h3>
-      <p>Our quantum energy is free. No watt-hour invoice, no compute meter running against you. Physics runs the plant. You are not paying for the power.</p>
-    </div>
-    <div class="card feature">
-      <div class="eyebrow">Panda ASI vision</div>
-      <div class="amount">Give back</div>
-      <h3>Datacenter dividend: we pay you</h3>
-      <p>Instead of charging for energy and compute, our vision is datacenters that give energy, and money, back to users. A direction we are building toward — not a figure, a yield, or an invitation to invest.</p>
-    </div>
-  </div>
-  <blockquote>“Quantum energy is free. The datacenter gives energy, and money, back.” — The Panda CEO 🐼</blockquote>
-</section>
-
-<section id="space">
-  <h2>The <span class="g">space program</span></h2>
-  <p class="m">Quantum-nano rockets and a program to the Moon and Mars — and a community of builders. We look for <b>personalities, not pedigrees</b>: curious people who want to work on the hardest problems.</p>
-  <a class="btn" href="#contact">Get in touch</a>
-</section>
-
-<section id="gallery">
-  <h2>Panda <span class="g">gallery</span></h2>
-  <div class="gal">
-    <img loading="lazy" src="assets/quantum.webp" alt="Quantum orbitals" width="1200" height="800">
-    <img loading="lazy" src="assets/chip.webp" alt="Quantum processor" width="1200" height="800">
-    <img loading="lazy" src="assets/coins.webp" alt="Quantum money" width="1200" height="800">
-    <img loading="lazy" src="assets/datacenter.webp" alt="Datacenter" width="1200" height="800">
-    <img loading="lazy" src="assets/network.webp" alt="AI neural network" width="1200" height="800">
-    <img loading="lazy" src="assets/pandanauts.webp" alt="Space program rocket" width="1200" height="800">
-  </div>
-</section>
-
-<section id="faq">
-  <h2>Frequently Asked <span class="g">Quantum Questions</span></h2>
-  <details><summary>Is Panda ASI really worth 100+ billion?</summary><p>100+ billion is the scale of the vision we're building toward. There are no shares, tokens or anything for sale here.</p></details>
-  <details><summary>Can I buy quantum money or invest?</summary><p>No. This is a vision site. We don't sell anything or take money, and we don't promise returns. If someone claims to sell “Panda quantum money”, it isn't us.</p></details>
-  <details><summary>What is quantum money, honestly?</summary><p>A real idea from quantum information science (Wiesner, 1970s): banknotes made of quantum states that can't be copied because of the no-cloning theorem. Practical versions are still research.</p></details>
-  <details><summary>Does a datacenter really produce more energy than it uses?</summary><p>Not by the laws of physics we know — it's our dream framing for datacenters paired with local renewables, waste-heat reuse and storage so they give a lot back to their communities.</p></details>
-  <details><summary>Where is a superposition payment, in this vision?</summary><p>Not in one place. It is verifiable everywhere, at any time, and settles when it is used. This is a concept, not a live payment product.</p></details>
-  <details><summary>Are the energy drinks for sale?</summary><p>No. Panda Quantum and Panda ASI drinks are a brand and product concept, not something you can buy today.</p></details>
-  <details><summary>How do I work with Panda ASI?</summary><p>Bring serious work on hard problems, and write to us at <a href="mailto:antinous@panda-asi.com">antinous@panda-asi.com</a>. The Moon and Mars program is a long-horizon vision, not a ticket offer.</p></details>
-</section>
-
-
-<section id="contact">
-  <h2>Get in <span class="g">touch</span> 🐼</h2>
-  <p class="m">Ideas, partnerships and serious collaboration? Email us at <a href="mailto:antinous@panda-asi.com">antinous@panda-asi.com</a>.</p>
-  <a class="btn" href="mailto:antinous@panda-asi.com">Email Panda</a>
-</section>
-
-<footer>© 2026 Panda ASI · Helsinki · <a href="mailto:antinous@panda-asi.com">antinous@panda-asi.com</a><br><small style="font-size:.7rem;opacity:.7">Concept/vision site. Not financial advice.</small></footer>
-<script data-goatcounter="https://pandaasi.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<footer>
+<span class="grad">Panda ASI</span>
+Helsinki · <a href="mailto:antinous@panda-asi.com">antinous@panda-asi.com</a>
+</footer>
 </body>
 </html>
