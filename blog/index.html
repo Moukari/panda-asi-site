@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Blog | Panda ASI — The future of quantum money</title>
+<meta name="description" content="Panda ASI blog: weekly articles on the future of quantum money, Super ASI, energy-giving datacenters and the space program.">
+<link rel="canonical" href="https://panda-asi.com/blog/">
+<meta name="theme-color" content="#0a0510">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Panda ASI">
+<meta property="og:title" content="Blog | Panda ASI — The future of quantum money">
+<meta property="og:description" content="Panda ASI blog: weekly articles on the future of quantum money, Super ASI, energy-giving datacenters and the space program.">
+<meta property="og:image" content="https://panda-asi.com/og-image-v3.jpg">
+<meta property="og:url" content="https://panda-asi.com/blog/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Blog | Panda ASI — The future of quantum money">
+<meta name="twitter:description" content="Panda ASI blog: weekly articles on the future of quantum money, Super ASI, energy-giving datacenters and the space program.">
+<meta name="twitter:image" content="https://panda-asi.com/og-image-v3.jpg">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" href="/assets/favicon-32.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#07040c;--pink:#ff2d87;--orange:#ff7a1a;--yellow:#ffd23f;--teal:#0e4d5c;--txt:#f4eef2;--mut:#b3a3b0;
+--grad:linear-gradient(180deg,var(--yellow) 0%,var(--orange) 50%,var(--pink) 100%);
+--anton:Anton,Impact,"Arial Narrow",sans-serif;--ui:Montserrat,system-ui,sans-serif}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--txt);font-family:var(--ui);font-weight:500;line-height:1.55;overflow-x:hidden}
+body:after{content:"";position:fixed;inset:0;pointer-events:none;z-index:50;
+background:radial-gradient(ellipse at center,transparent 55%,rgba(0,0,0,.55) 100%);}
+a{color:var(--yellow)}
+img{max-width:100%;height:auto;display:block}
+.grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;
+filter:drop-shadow(0 4px 0 rgba(0,0,0,.55)) drop-shadow(0 0 22px rgba(255,45,135,.35))}
+h1,h2,h3{font-family:var(--anton);font-weight:400;text-transform:uppercase;letter-spacing:.015em;line-height:1.02;margin:0}
+/* HERO */
+.hero{position:relative;min-height:min(100svh,860px);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;
+padding:4rem 5vw 5rem;overflow:hidden;
+background:
+ radial-gradient(ellipse 90% 55% at 50% 100%,rgba(255,122,26,.55) 0%,rgba(255,45,135,.35) 35%,transparent 70%),
+ linear-gradient(180deg,#07040c 0%,#150a24 45%,#3a1233 75%,#7a2440 100%)}
+.hero:before{content:"";position:absolute;left:0;right:0;bottom:0;height:34%;pointer-events:none;
+background:linear-gradient(0deg,rgba(14,77,92,.75),transparent)}
+.hero:after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.12;mix-blend-mode:overlay;
+background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)'/%3E%3C/svg%3E")}
+.hero>*{position:relative;z-index:2}
+.logo{width:min(46vw,260px);mix-blend-mode:screen;margin-bottom:1.4rem}
+.hero h1{font-size:clamp(2.4rem,8.6vw,6.2rem)}
+.hero h1 span{display:block}
+.cta{margin-top:1.8rem;display:inline-block;font-family:var(--anton);text-transform:uppercase;letter-spacing:.08em;font-size:1.05rem;
+color:#07040c;background:var(--grad);padding:.8rem 1.8rem;text-decoration:none;box-shadow:0 6px 0 rgba(0,0,0,.5),0 0 30px rgba(255,45,135,.4)}
+.cta:hover{filter:brightness(1.1)}
+/* SECTIONS */
+section{max-width:1000px;margin:auto;padding:4.5rem 5vw}
+h2{font-size:clamp(2rem,6vw,3.4rem);margin-bottom:1.4rem}
+.vid{position:relative;aspect-ratio:16/9;border:2px solid rgba(255,122,26,.7);box-shadow:0 0 0 1px #000,0 0 60px rgba(255,45,135,.35);background:#000}
+.vid iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.vision{text-align:center}
+.vision p{font-family:var(--anton);text-transform:uppercase;font-size:clamp(1.5rem,4.6vw,2.6rem);line-height:1.15;margin:0}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;padding-top:0}
+.card{padding:1.5rem 1.2rem;border:1px solid rgba(255,255,255,.12);background:linear-gradient(160deg,rgba(255,45,135,.14),rgba(14,77,92,.25));text-align:center}
+.card h3{font-size:1.7rem;margin-bottom:.4rem}
+.card p{margin:0;color:var(--mut)}
+.week{text-align:center}
+.week small{display:block;font-family:var(--ui);font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--pink);margin-bottom:.6rem}
+.week p{max-width:46ch;margin:.8rem auto 0;color:var(--mut)}
+footer{text-align:center;padding:3rem 5vw 4rem;border-top:1px solid rgba(255,255,255,.1);color:var(--mut);font-size:.9rem}
+footer .grad{font-family:var(--anton);text-transform:uppercase;font-size:1.3rem;letter-spacing:.05em;display:block;margin-bottom:.6rem}
+@media(max-width:720px){.cards{grid-template-columns:1fr}section{padding:3.2rem 6vw}}
+@media(prefers-reduced-motion:no-preference){.logo{animation:fl 5s ease-in-out infinite}@keyframes fl{50%{transform:translateY(-8px)}}}
+
+.top{display:flex;align-items:center;justify-content:space-between;max-width:1000px;margin:auto;padding:1.2rem 5vw}
+.top a{font-family:var(--anton);text-transform:uppercase;letter-spacing:.06em;text-decoration:none}
+.top img{width:56px;mix-blend-mode:screen}
+article{max-width:760px;margin:auto;padding:2rem 5vw 4rem}
+article h1{font-size:clamp(2.2rem,7vw,4.2rem);margin:.4rem 0 1.4rem}
+article h2{font-size:clamp(1.5rem,4vw,2.1rem);margin:2.2rem 0 .8rem}
+article p{font-size:1.08rem;color:#e6dde3;margin:0 0 1.1rem}
+article .lead{font-size:1.25rem;color:var(--txt)}
+article .meta{font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--pink);font-size:.85rem}
+article .sign{margin-top:2rem;font-weight:700;color:var(--yellow)}
+.post{display:block;padding:1.4rem 1.2rem;margin-bottom:1rem;border:1px solid rgba(255,255,255,.12);background:linear-gradient(160deg,rgba(255,45,135,.14),rgba(14,77,92,.25));text-decoration:none;color:var(--txt)}
+.post h2{font-size:1.8rem;margin:.3rem 0 .5rem}.post p{margin:0;color:var(--mut)}
+footer small{display:block;margin-top:.8rem;font-size:.75rem;opacity:.7}
+</style>
+<script data-goatcounter="https://pandaasi.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</head>
+<body>
+<nav class="top"><a href="/"><img src="/assets/panda-logo-gta.webp" width="640" height="640" alt="Panda ASI logo"></a><a class="grad" href="/blog/">Blog</a></nav>
+<article>
+<span class="meta">Panda ASI blog</span>
+<h1 class="grad">The future of quantum money</h1>
+<!-- POSTS (newest first) -->
+<a class="post" href="/blog/2026-11-20-quantum-money-priced-in-energy/"><span class="meta">20 Nov 2026</span><h2 class="grad">Quantum Money Will Be Priced in Energy</h2><p>Why the money that follows banks and blockchains will be protected by physics and measured in the energy it takes to compute, move and store value.</p></a>
+</article>
+<footer>
+<span class="grad">Banks print it. Blockchains copy it. Physics protects it.</span>
+Helsinki · <a href="mailto:antinous@panda-asi.com">antinous@panda-asi.com</a> · <a href="/blog/">Blog</a>
+<small>Not financial advice.</small>
+</footer>
+</body>
+</html>
